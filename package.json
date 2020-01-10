@@ -1,6 +1,6 @@
 {
   "name": "luthier",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Luthier handles all of your stringed needs.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,7 @@
     "url": "https://github.com/joshtronic/luthier/issues"
   },
   "engines": {
-    "node": ">= 12.0.0"
+    "node": ">= 8.0.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.25",
@@ -33,6 +33,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "publish": "npm build && npm publish",
     "test": "jest",
     "test:coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
   }
