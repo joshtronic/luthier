@@ -167,7 +167,9 @@ describe('snakeCase', () => {
 
 describe('startCase', () => {
   it('should capitalize every word', () => {
-    expect(luthier.shuffle('test TEST test')).not.toBe('Test Test Test');
+    expect(luthier.startCase('TESTING')).toBe('Testing');
+    expect(luthier.startCase('testing  Testing')).toBe('Testing  Testing');
+    expect(luthier.startCase('- TESTING - testing -')).toBe('- Testing - Testing -');
   });
 });
 
