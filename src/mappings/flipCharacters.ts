@@ -88,6 +88,7 @@ const flipCharacters: { [chr: string]: string } = {
   Ԁ: 'P',
   ტ: 'Q',
   ᴚ: 'R',
+  // eslint-disable-next-line quote-props
   'Ʇ': 'T',
   Ո: 'U',
   Λ: 'V',
@@ -120,7 +121,7 @@ const flipCharacters: { [chr: string]: string } = {
   '"': '„',
   '!': '¡',
   '?': '¿',
-  '_': '‾',
+  _: '‾',
   '&': '⅋',
 
   '؛': ';',
@@ -132,6 +133,4 @@ const flipCharacters: { [chr: string]: string } = {
   '⅋': '&',
 };
 
-export {
-  flipCharacters,
-};
+export { flipCharacters };
