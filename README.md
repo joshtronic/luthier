@@ -29,11 +29,33 @@ import { luthier } from 'luthier';
 
 * [`camelCase`](#camelCase)
 * [`constantCase`](#constantCase)
+* [`containsLetters`](#containsLetters)
+* [`containsLowerCasedLetters`](#containsLowerCasedLetters)
+* [`containsNumbers`](#containsNumbers)
+* [`containsOnlyLetters`](#containsOnlyLetters)
+* [`containsOnlyLowerCasedLetters`](#containsOnlyLowerCasedLetters)
+* [`containsOnlyNumbers`](#containsOnlyNumbers)
+* [`containsOnlySpecialCharacters`](#containsOnlySpecialCharacters)
+* [`containsOnlyUpperCasedLetters`](#containsOnlyUpperCasedLetters)
+* [`containsSpecialCharacters`](#containsSpecialCharacters)
+* [`containsUpperCasedLetters`](#containsUpperCasedLetters)
 * [`countLines`](#countLines)
 * [`countWords`](#countWords)
+* [`customCase`](#customCase)
 * [`dotCase`](#dotCase)
 * [`flip`](#flip)
-* [`initials`](#initial)
+* [`initials`](#initials)
+* [`isCamelCased`](#isCamelCased)
+* [`isCapitalized`](#isCapitalized)
+* [`isConstantCased`](#isConstantCased)
+* [`isDotCased`](#isDotCased)
+* [`isKebabCased`](#isKebabCased)
+* [`isLowerCased`](#isLowerCased)
+* [`isPascalCased`](#isPascalCased)
+* [`isSnakeCased`](#isSnakeCased)
+* [`isStartCased`](#isStartCased)
+* [`isStudlyCapped`](#isStudlyCapped)
+* [`isUpperCased`](#isUpperCased)
 * [`kebabCase`](#kebabCase)
 * [`lowerCaseFirst`](#lowerCaseFirst)
 * [`lowerCaseWords`](#lowerCaseWords)
@@ -64,6 +86,76 @@ luthier.constantCase('your string');
 // 'YOUR_STRING'
 ```
 
+#### `containsLetters`
+
+```javascript
+luthier.containsLetters('your string');
+// true
+```
+
+#### `containsLowerCasedLetters`
+
+```javascript
+luthier.containsLowerCasedLetters('your string');
+// true
+```
+
+#### `containsNumbers`
+
+```javascript
+luthier.containsNumbers('your string');
+// false
+```
+
+#### `containsOnlyLetters`
+
+```javascript
+luthier.containsLetters('your string');
+// false
+```
+
+#### `containsOnlyLowerCasedLetters`
+
+```javascript
+luthier.containsOnlyLowerCasedLetters('your string');
+// false
+```
+
+#### `containsOnlyNumbers`
+
+```javascript
+luthier.containsOnlyNumbers('your string');
+// false
+```
+
+#### `containsOnlySpecialCharacters`
+
+```javascript
+luthier.containsOnlySpecialCharacters('your string');
+// false
+```
+
+#### `containsOnlyUpperCasedLetters`
+
+```javascript
+luthier.containsOnlyUpperCasedLetters('your string');
+// false
+```
+
+#### `containsSpecialCharacters`
+
+```javascript
+luthier.containsSpecialCharacters('your string');
+// true
+```
+
+#### `containsUpperCasedLetters`
+
+```javascript
+luthier.containsUpperCasedLetters('your string');
+// false
+```
+
 #### `countLines`
 
 ```javascript
@@ -76,6 +168,13 @@ luthier.countLines('your\nstring');
 ```javascript
 luthier.countWords('your string');
 // 2
+```
+
+#### `customCase`
+
+```javascript
+luthier.customCase('+', 'your string');
+// 'your+string'
 ```
 
 #### `dotCase`
@@ -97,6 +196,83 @@ luthier.flip('your string');
 ```javascript
 luthier.initials('your string');
 // 'YG'
+```
+
+#### `isCamelCased`
+
+```javascript
+luthier.isCamelCased('your string');
+// false
+```
+
+#### `isCapitalized`
+
+```javascript
+luthier.isCapitalized('your string');
+// false
+```
+
+#### `isConstantCased`
+
+```javascript
+luthier.isConstantCased('your string');
+// false
+```
+
+#### `isDotCased`
+
+```javascript
+luthier.isDotCased('your string');
+// false
+```
+
+#### `isKebabCased`
+
+```javascript
+luthier.isKebabCased('your string');
+// false
+```
+
+#### `isLowerCased`
+
+```javascript
+luthier.isKebabCased('your string');
+// true
+```
+
+#### `isPascalCased`
+
+```javascript
+luthier.isPascalCased('your string');
+// false
+```
+
+#### `isSnakeCased`
+
+```javascript
+luthier.isSnakeCased('your string');
+// false
+```
+
+#### `isStartCased`
+
+```javascript
+luthier.isStartCased('your string');
+// false
+```
+
+#### `isStudlyCapped`
+
+```javascript
+luthier.isStudlyCapped('your string');
+// false
+```
+
+#### `isUpperCased`
+
+```javascript
+luthier.isUpperCased('your string');
+// false
 ```
 
 #### `kebabCase`

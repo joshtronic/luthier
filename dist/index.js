@@ -1,126 +1,49 @@
 "use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
 Object.defineProperty(exports, "__esModule", { value: true });
-var flip_characters_1 = require("./flip-characters");
-var camelCase = function (str) {
-    return lowerCaseFirst(pascalCase(str));
-};
-exports.camelCase = camelCase;
-var constantCase = function (str) {
-    return str.toUpperCase().replace(/[^A-Z ]/g, '').trim().replace(/ +/g, '_');
-};
-exports.constantCase = constantCase;
-var countLines = function (str) {
-    return str.split(/\r\n|\r|\n/).length;
-};
-exports.countLines = countLines;
-var countWords = function (str) {
-    return str.trim().split(/\s+/).length;
-};
-exports.countWords = countWords;
-var dotCase = function (str) {
-    return str.toLowerCase().replace(/[^a-z ]/g, '').trim().replace(/ +/g, '.');
-};
-exports.dotCase = dotCase;
-var flip = function (str) {
-    return str.split('').reverse().map(function (chr) {
-        return flip_characters_1.flipCharacters[chr] || chr;
-    }).join('');
-};
-exports.flip = flip;
-var initials = function (str) {
-    return str.trim().split(/\s+/).reduce(function (result, word) { return result + word[0].toUpperCase(); }, '');
-};
-exports.initials = initials;
-var kebabCase = function (str) {
-    return str.toLowerCase().replace(/[^a-z ]/g, '').trim().replace(/ +/g, '-');
-};
-exports.kebabCase = kebabCase;
-var lowerCaseFirst = function (str) {
-    return str.replace(/^\w/, function (c) { return c.toLowerCase(); });
-};
-exports.lowerCaseFirst = lowerCaseFirst;
-var lowerCaseWords = function (str) {
-    return str.replace(/\w\S*/g, function (w) { return lowerCaseFirst(w); });
-};
-exports.lowerCaseWords = lowerCaseWords;
-var numeronym = function (str) {
-    var trimmed = str.trim().replace(/\s+/, '').split('');
-    if (trimmed.length === 1) {
-        return trimmed[0];
-    }
-    if (trimmed.length === 2) {
-        return trimmed[0] + (trimmed.length - 1);
-    }
-    return trimmed[0] + (trimmed.length - 2) + trimmed.slice(-1);
-};
-exports.numeronym = numeronym;
-var pascalCase = function (str) {
-    return upperCaseWords(str.toLowerCase().replace(/[^a-z ]/g, '')).replace(/ /g, '');
-};
-exports.pascalCase = pascalCase;
-var random = function (length) {
-    var randomInt = function (min, max) { return (Math.random() * (max - min) + min); };
-    var str = '';
-    for (var i = 0; i < length; i++) {
-        str += String.fromCharCode(randomInt(32, 126));
-    }
-    return str;
-};
-exports.random = random;
-var reverse = function (str) {
-    return str.split('').reverse().join('');
-};
-exports.reverse = reverse;
-var rot13 = function (str) {
-    return str.replace(/[a-z]/gi, function (c) { return (String.fromCharCode(c.charCodeAt(0) + (c.toUpperCase() <= 'M' ? 13 : -13))); });
-};
-exports.rot13 = rot13;
-var shuffle = function (str) {
-    var _a;
-    var arr = str.split('');
-    for (var i = arr.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        _a = [arr[j], arr[i]], arr[i] = _a[0], arr[j] = _a[1];
-    }
-    return arr.join('');
-};
-exports.shuffle = shuffle;
-var snakeCase = function (str) {
-    return str.toLowerCase().replace(/[^a-z ]/g, '').trim().replace(/ +/g, '_');
-};
-exports.snakeCase = snakeCase;
-var startCase = function (str) {
-    return upperCaseWords(str.toLowerCase());
-};
-exports.startCase = startCase;
-var stripTags = function (str) {
-    return str.replace(/<[^>]*>/g, '');
-};
-exports.stripTags = stripTags;
-var studlyCaps = function (str) {
-    return str.split('').reduce(function (result, chr) {
-        if (/[a-z]/i.test(chr)) {
-            if (result.upper) {
-                result.string += chr.toUpperCase();
-                result.upper = false;
-            }
-            else {
-                result.string += chr.toLowerCase();
-                result.upper = true;
-            }
-        }
-        else {
-            result.string += chr;
-        }
-        return result;
-    }, { string: '', upper: true }).string;
-};
-exports.studlyCaps = studlyCaps;
-var upperCaseFirst = function (str) {
-    return str.replace(/^\w/, function (c) { return c.toUpperCase(); });
-};
-exports.upperCaseFirst = upperCaseFirst;
-var upperCaseWords = function (str) {
-    return str.replace(/\w\S*/g, function (w) { return upperCaseFirst(w); });
-};
-exports.upperCaseWords = upperCaseWords;
+__export(require("./functions/camelCase"));
+__export(require("./functions/constantCase"));
+__export(require("./functions/containsLetters"));
+__export(require("./functions/containsLowerCasedLetters"));
+__export(require("./functions/containsNumbers"));
+__export(require("./functions/containsOnlyLetters"));
+__export(require("./functions/containsOnlyLowerCasedLetters"));
+__export(require("./functions/containsOnlyNumbers"));
+__export(require("./functions/containsOnlySpecialCharacters"));
+__export(require("./functions/containsOnlyUpperCasedLetters"));
+__export(require("./functions/containsSpecialCharacters"));
+__export(require("./functions/containsUpperCasedLetters"));
+__export(require("./functions/countLines"));
+__export(require("./functions/countWords"));
+__export(require("./functions/customCase"));
+__export(require("./functions/dotCase"));
+__export(require("./functions/flip"));
+__export(require("./functions/initials"));
+__export(require("./functions/isCamelCased"));
+__export(require("./functions/isCapitalized"));
+__export(require("./functions/isConstantCased"));
+__export(require("./functions/isDotCased"));
+__export(require("./functions/isKebabCased"));
+__export(require("./functions/isLowerCased"));
+__export(require("./functions/isPascalCased"));
+__export(require("./functions/isSnakeCased"));
+__export(require("./functions/isStartCased"));
+__export(require("./functions/isStudlyCapped"));
+__export(require("./functions/isUpperCased"));
+__export(require("./functions/kebabCase"));
+__export(require("./functions/lowerCaseFirst"));
+__export(require("./functions/lowerCaseWords"));
+__export(require("./functions/numeronym"));
+__export(require("./functions/pascalCase"));
+__export(require("./functions/random"));
+__export(require("./functions/reverse"));
+__export(require("./functions/rot13"));
+__export(require("./functions/shuffle"));
+__export(require("./functions/snakeCase"));
+__export(require("./functions/startCase"));
+__export(require("./functions/stripTags"));
+__export(require("./functions/studlyCaps"));
+__export(require("./functions/upperCaseFirst"));
+__export(require("./functions/upperCaseWords"));

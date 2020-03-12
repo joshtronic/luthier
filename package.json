@@ -1,6 +1,6 @@
 {
   "name": "luthier",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Luthier handles all of your string needs.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -18,21 +18,23 @@
     "node": ">= 8.0.0"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.25",
-    "@types/node": "^13.1.5",
-    "@typescript-eslint/eslint-plugin": "^2.15.0",
-    "@typescript-eslint/parser": "^2.15.0",
-    "coveralls": "^3.0.9",
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.2",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "coveralls": "^3.0.11",
     "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.19.1",
-    "eslint-plugin-jest": "^23.3.0",
-    "jest": "^24.9.0",
-    "ts-jest": "^24.3.0",
-    "typescript": "^3.7.4"
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.8.2",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.3"
   },
   "scripts": {
     "build": "tsc",
-    "test": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "lint": "eslint --ext .ts src",
+    "test": "jest",
+    "test:coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
   }
 }
