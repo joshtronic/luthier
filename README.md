@@ -320,21 +320,21 @@ luthier.random(10);
 #### `reverse`
 
 ```javascript
-luthier.pascalCase('your string');
+luthier.reverse('your string');
 // 'gnirts ruoy'
 ```
 
 #### `rot13`
 
 ```javascript
-luthier.pascalCase('your string');
+luthier.rot13('your string');
 // 'lbhe fgevat'
 ```
 
 #### `shuffle`
 
 ```javascript
-luthier.pascalCase('your string');
+luthier.shuffle('your string');
 // 'nru grsioty'
 ```
 
