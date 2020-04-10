@@ -1,6 +1,6 @@
 {
   "name": "luthier",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Luthier handles all of your string needs.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -33,7 +33,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "lint": "eslint --ext .ts src",
+    "lint": "eslint --ext .ts src tests",
     "test": "jest",
     "test:coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
   }
