@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.isStudlyCapped = void 0;
 var isStudlyCapped = function (str) {
     var isStudly = true;
     var shouldBeUpperCased = true;

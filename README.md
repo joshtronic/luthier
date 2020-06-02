@@ -8,8 +8,8 @@
 
 [![License](https://img.shields.io/npm/l/luthier?style=for-the-badge)](https://github.com/joshtronic/luthier/blob/master/LICENSE)
 ![Node Version](https://img.shields.io/node/v/luthier?style=for-the-badge)
-![Build Status](https://img.shields.io/travis/joshtronic/luthier/master?style=for-the-badge)
-[![Coverage Status](https://img.shields.io/coveralls/github/joshtronic/luthier/master?style=for-the-badge)](https://coveralls.io/github/joshtronic/luthier?branch=master)
+[![Test Status](https://img.shields.io/github/workflow/status/joshtronic/luthier/Test?style=for-the-badge)](https://github.com/joshtronic/luthier/actions)
+[![Code Coverage](https://img.shields.io/codecov/c/github/joshtronic/luthier?style=for-the-badge)](https://codecov.io/gh/joshtronic/luthier)
 
 ## Installation
 

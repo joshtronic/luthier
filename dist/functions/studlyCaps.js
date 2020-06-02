@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.studlyCaps = void 0;
 var studlyCaps = function (str) { return (str.toLowerCase().replace(/[^a-z]/g, '').split('').reduce(function (previousResult, chr) {
     var result = previousResult;
     if (result.upper) {
