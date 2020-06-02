@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.numeronym = void 0;
 var numeronym = function (str) {
     var trimmed = str.trim().replace(/\s+/, '').split('');
     if (trimmed.length === 1) {
