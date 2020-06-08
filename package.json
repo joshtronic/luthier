@@ -1,6 +1,6 @@
 {
   "name": "luthier",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Luthier handles all of your string needs.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
